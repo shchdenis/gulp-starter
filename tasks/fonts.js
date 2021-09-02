@@ -23,5 +23,6 @@ module.exports = function fonts(done) {
         )
         .pipe(ttf2woff())
         .pipe(dest("dist/fonts"));
+    src("src/fonts/**/*.css").pipe(dest("dist/fonts"));
     done();
 };
